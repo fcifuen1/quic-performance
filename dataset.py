@@ -1,9 +1,9 @@
-# !/usr/bin/env python
+# !/usr/bin/env python3
 # 
 # Author: Federico Cifuentes-Urtubey (fc8@illinois.edu)
 # 
-# Usage: python3 stats.py [csv file] > [results text file]
-#
+# Usage: python3 dataset.py [source text file] > [results text file]
+# 
 # Assumes the format of the csv file is
 # Protocol, Day, Time, Environment, Website, Response time
 
@@ -32,16 +32,6 @@ def main():
 
 			# Timings are in the format #:##:##.######
 			timing = float((row[5].split(":"))[2])
-
-			"""
-
-			# Sort entries by protocol
-			if row[0] == 'HTTP/2':
-				h2_Times.append(timing)
-			elif row[0] == 'HTTP/1.1':
-				h11_Times.append(timing)
-
-			"""
 
 			times.append(timing)
 
